@@ -1,6 +1,8 @@
 ![Japanese_20](https://i.imgur.com/8jb2hrr.png)
 <!-- ![Japanese_20](https://github.com/user-attachments/assets/d7234b0f-c7a5-4c5d-ab05-b10a5c88ce8a) -->
 
+🔴 Phonemer is currently private. Please contact me if interested.
+
 # Phonemer
 
 Phonemer is a tool designed for grapheme and syllable detection and positioning in several languages (and multilingual), developed for a friend's new piece; [Georges Bloch](https://www.ircam.fr/dashboard/georges-bloch/). It detects phonemes or syllables and saves them into a CUE file, [Max](https://cycling74.com) coll file, or as markers in an audio file.
