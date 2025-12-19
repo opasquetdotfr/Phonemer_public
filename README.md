@@ -1,8 +1,6 @@
 ![Japanese_20](https://i.imgur.com/8jb2hrr.png)
 <!-- ![Japanese_20](https://github.com/user-attachments/assets/d7234b0f-c7a5-4c5d-ab05-b10a5c88ce8a) -->
 
-🔴 Phonemer is currently private. Please contact me if interested.
-
 # Phonemer
 
 Phonemer is a tool designed for grapheme and syllable detection and positioning in several languages (and multilingual), developed for a friend's new piece; [Georges Bloch](https://www.ircam.fr/dashboard/georges-bloch/). It detects phonemes or syllables and saves them into a CUE file, [Max](https://cycling74.com) coll file, or as markers in an audio file.
@@ -35,6 +33,7 @@ huggingface-hub - 0.34.3
 
 To install Phonemer, follow these simple basic steps:
 
+0. [ffmpeg](https://ffmpeg.org) may need to be installed
 1. Move to the directory where `phonemer.py` is located
 2. Create a virtual environment:<br>
     `python3 -m venv Phonemer_venv`
@@ -55,7 +54,7 @@ OR<br>
 - Activate the virtual environment, then...
 
 - Spoken Words in French:<br>
-`python phonemer.py --input André_Malraux_bio.wav --language French_1`
+`python phonemer.py --input André_Malraux_bio.wav --language French_1`
 
 - Spoken Words in English:<br>
 `python phonemer.py --input George_Orwell.wav --language English_1 --show_vocab --syllables --save_markers --save_coll --save_cue --time_shift -86`
@@ -88,8 +87,33 @@ The system generates potential grapheme or syllable outputs, displaying each res
 1733, MID 0.9999908208847046;
 ...
 ```
+`--save_audacity_1`: Save Audacity marker (label) file - format 1
+```python
+0.080	0.080	T
+0.140	0.140	O
+0.160	0.160	U
+...
+```
+`--save_audacity_2`: Save Audacity marker (label) file - format 2
+```python
+0.080	0.100	T
+0.100	0.160	O
+0.160	0.180	U
+...
+```
+`--save_vocab`: Save vocab dictionary of the used model
+```python
+1, <pad>;
+2, <s>;
+3, </s>;
+4, <unk>;
+5, |;
+6, E;
+7, S;
+8, A;
+...
+```
 `--save_markers`: save markers in WAV audio file
-
 <!-- <img width="400" height="330" alt="Screenshot 2025-08-06 at 16 24 43" src="https://github.com/user-attachments/assets/83b503e1-25ad-4d42-8375-20de2ca9870f" /> -->
 <img width="400" height="330" alt="Screenshot 2025-08-06 at 16 24 43" src="https://i.imgur.com/z2cmGYa.png" />
 
@@ -104,7 +128,10 @@ The system generates potential grapheme or syllable outputs, displaying each res
 | `--save_cue`           | Optional    | True         | Save CUE file                                              |
 | `--save_markers`       | Optional    | False        | Save markers in WAV audio file; channel number etc. are kept|
 | `--save_coll`          | Optional    | False        | Save coll file for Max                                      |
+| `--save_audacity_1`    | Optional    | False        | Save Audacity marker file - format 1                                      |
+| `--save_audacity_2`    | Optional    | False        | Save Audacity marker file - format 2                                      |
 | `--show_vocab`         | Optional    | False        | Show vocab dictionary of the used model                     |
+| `--save_vocab`         | Optional    | False        | Save vocab dictionary of the used model                     |
 | `--time_shift`         | Optional    | 0            | Adjust possible positive or negative latencies in ms        |
 
 ## Available Languages
