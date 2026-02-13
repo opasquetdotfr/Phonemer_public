@@ -33,7 +33,8 @@ huggingface-hub - 0.34.3
 
 To install Phonemer, follow these simple basic steps:
 
-0. [ffmpeg](https://ffmpeg.org) may need to be installed
+0. [ffmpeg](https://ffmpeg.org) may need to be installed. You can also install it from [brew](https://brew.sh) or [macport](https://www.macports.org).
+0. When using macport, you may need `export DYLD_LIBRARY_PATH="/opt/local/lib:$DYLD_LIBRARY_PATH"`. Should be fine with brew. 
 1. Move to the directory where `phonemer.py` is located
 2. Create a virtual environment:<br>
     `python3 -m venv Phonemer_venv`
@@ -44,7 +45,7 @@ OR<br>
    `source Phonemer_venv/bin/activate`
 4. Upgrade pip and install the required packages:<br>
    `pip install --upgrade pip`<br>
-   `pip install torch torchaudio transformers pyphen syllables soundfile`
+   `pip install torch torchaudio transformers pyphen syllables soundfile torchcodec`
 
 4. Deactivate the virtual environment after use:<br>
 `deactivate`
