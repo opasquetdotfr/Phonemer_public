@@ -1,5 +1,4 @@
-![Japanese_20](https://i.imgur.com/8jb2hrr.png)
-<!-- ![Japanese_20](https://github.com/user-attachments/assets/d7234b0f-c7a5-4c5d-ab05-b10a5c88ce8a) -->
+[Japanese_20](https://github.com/user-attachments/assets/d7234b0f-c7a5-4c5d-ab05-b10a5c88ce8a)
 
 # Phonemer
 
